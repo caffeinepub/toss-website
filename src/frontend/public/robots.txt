@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
 Sitemap: https://toss-website-8nh.caffeine.xyz/sitemap.xml

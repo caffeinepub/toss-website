@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://toss-website-8nh.caffeine.xyz/sitemap.xml

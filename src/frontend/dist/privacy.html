@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Toss - Free Online Coin Flip</title>
+  <meta name="description" content="Privacy Policy for Toss Coin Flip. Learn how we handle your data, cookies, and advertising on our free online coin toss simulator." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toss-website-8nh.caffeine.xyz/privacy.html" />
+  <meta name="google-site-verification" content="ot3oIh7b2Nl5LizyFec7zsHpfoY2qmx7zhLk3ktC1L8" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://toss-website-8nh.caffeine.xyz/privacy.html" />
+  <meta property="og:title" content="Privacy Policy | Toss Coin Flip" />
+  <meta property="og:description" content="Read the Privacy Policy for Toss Coin Flip, including information on cookies, Google AdSense, GDPR, and CCPA rights." />
+  <meta property="og:site_name" content="Toss Coin Flip" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "url": "https://toss-website-8nh.caffeine.xyz/privacy.html",
+    "description": "Privacy Policy for Toss Coin Flip - Free Online Coin Toss Simulator",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Toss Coin Flip",
+      "url": "https://toss-website-8nh.caffeine.xyz/"
+    },
+    "dateModified": "2026-03-30"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: rgba(255,255,255,0.08);
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --orange: #f97316;
+      --orange-light: rgba(249,115,22,0.12);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,17,23,0.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+    }
+    nav {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 900;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .logo span { color: var(--orange); }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+    }
+    nav ul li a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    nav ul li a:hover { color: var(--text); text-decoration: none; }
+
+    /* MAIN */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--orange); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; }
+
+    /* HEADER */
+    .page-header {
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .last-updated {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .summary-banner {
+      background: var(--orange-light);
+      border: 1px solid rgba(249,115,22,0.25);
+      border-left: 4px solid var(--orange);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .summary-banner strong { color: var(--orange); }
+
+    /* TABLE OF CONTENTS */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .toc ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .toc li { font-size: 14px; }
+    .toc a { color: var(--text); }
+    .toc a:hover { color: var(--orange); text-decoration: none; }
+
+    /* SECTIONS */
+    .policy-section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section:last-child { border-bottom: none; }
+    h2 {
+      font-size: 22px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--orange);
+      margin-bottom: 16px;
+      margin-top: 0;
+    }
+    h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      margin-top: 24px;
+    }
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+    ul, ol {
+      color: var(--muted);
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+    strong { color: var(--text); }
+    .highlight-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      font-size: 14px;
+    }
+    .highlight-box p { margin-bottom: 0; font-size: 14px; }
+
+    /* FOOTER */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 32px 24px;
+      text-align: center;
+    }
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    footer .footer-links a {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer .footer-links a:hover { color: var(--text); text-decoration: none; }
+    footer p {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      main { padding: 32px 16px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="/" class="logo">T<span>O</span>SS</a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/privacy.html" style="color: var(--orange);">Privacy</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span>›</span>
+      <span>Privacy Policy</span>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <p class="label">Legal</p>
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last updated: March 30, 2026 &nbsp;|&nbsp; Effective date: January 1, 2024</p>
+      <div class="summary-banner">
+        <strong>Summary:</strong> Toss itself collects no personal data. This site displays Google AdSense advertisements, which may use cookies and similar tracking technologies for ad personalisation. You have full rights to opt out. This policy explains everything in plain language.
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="Table of contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#section-1">1. Who We Are</a></li>
+        <li><a href="#section-2">2. Information We Collect</a></li>
+        <li><a href="#section-3">3. How We Use Your Information</a></li>
+        <li><a href="#section-4">4. Cookies and Tracking Technologies</a></li>
+        <li><a href="#section-5">5. Google AdSense and Third-Party Advertising</a></li>
+        <li><a href="#section-6">6. Data Sharing and Disclosure</a></li>
+        <li><a href="#section-7">7. Data Retention</a></li>
+        <li><a href="#section-8">8. Your Rights — GDPR (EU/UK Users)</a></li>
+        <li><a href="#section-9">9. Your Rights — CCPA (California Users)</a></li>
+        <li><a href="#section-10">10. Children's Privacy (COPPA)</a></li>
+        <li><a href="#section-11">11. Data Security</a></li>
+        <li><a href="#section-12">12. Third-Party Links</a></li>
+        <li><a href="#section-13">13. Changes to This Policy</a></li>
+        <li><a href="#section-14">14. Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <section class="policy-section" id="section-1">
+      <h2>1. Who We Are</h2>
+      <p>Toss Coin Flip (&quot;Toss&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) operates the website accessible at <a href="https://toss-website-8nh.caffeine.xyz/">https://toss-website-8nh.caffeine.xyz/</a> (the &quot;Service&quot;). We provide a free, browser-based virtual coin flip tool for entertainment and decision-making purposes.</p>
+      <p>This Privacy Policy describes how we handle information in connection with your use of our Service. By using Toss, you agree to the practices described in this Policy. If you do not agree, please discontinue use of the Service.</p>
+      <div class="highlight-box">
+        <p><strong>Contact:</strong> For any privacy-related enquiries, please email <a href="mailto:privacy@toss-website-8nh.caffeine.xyz">privacy@toss-website-8nh.caffeine.xyz</a></p>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="policy-section" id="section-2">
+      <h2>2. Information We Collect</h2>
+
+      <h3>Information You Provide Directly</h3>
+      <p>Toss does not require you to create an account or provide any personal information to use the coin flip tool. The core service is available anonymously. If you choose to log in using Internet Identity (an optional feature), your session is handled entirely by Internet Identity's decentralised authentication system — we do not receive or store your credentials or identity key.</p>
+      <p>If you contact us via our Contact page, you voluntarily provide information such as your name and email address. This information is used solely to respond to your enquiry.</p>
+
+      <h3>Information Collected Automatically</h3>
+      <p>When you visit our website, certain technical information is collected automatically by your browser and by third-party services we use:</p>
+      <ul>
+        <li><strong>Log data:</strong> Your browser may send standard HTTP request data including your IP address, browser type and version, operating system, referring URL, pages visited, and timestamps. This data is processed transiently and is not stored in an identifiable form by us.</li>
+        <li><strong>Cookies:</strong> Small text files stored on your device. See Section 4 for full details.</li>
+        <li><strong>Usage data:</strong> Aggregated, anonymised statistics about how visitors interact with the site (e.g. pages viewed, time on page). This does not identify individual users.</li>
+      </ul>
+
+      <h3>Information We Do Not Collect</h3>
+      <p>We do not collect, store, or process: your name, email address, home address, phone number, payment information, precise location data, health data, biometric data, or any other category of sensitive personal information, unless you voluntarily provide it when contacting us.</p>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="policy-section" id="section-3">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the limited information we collect for the following purposes:</p>
+      <ul>
+        <li><strong>To provide and maintain the Service:</strong> Ensuring the coin flip tool functions correctly across all devices and browsers.</li>
+        <li><strong>To improve the Service:</strong> Analysing aggregated, anonymised usage patterns to identify areas for enhancement.</li>
+        <li><strong>To respond to communications:</strong> If you contact us, we use your provided contact details solely to reply to your message.</li>
+        <li><strong>To display relevant advertising:</strong> We use Google AdSense to monetise the Service. AdSense may use data it collects (via cookies and tracking pixels) to serve personalised or contextual advertisements. See Section 5 for full details.</li>
+        <li><strong>To comply with legal obligations:</strong> We may process data as required by applicable law, court order, or governmental authority.</li>
+      </ul>
+      <p>We do not sell your personal data to third parties. We do not use your data for profiling, automated decision-making that produces legal effects, or any purpose incompatible with those listed above.</p>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="policy-section" id="section-4">
+      <h2>4. Cookies and Tracking Technologies</h2>
+      <p>Cookies are small text files placed on your device when you visit a website. They allow the website to recognise your device on subsequent visits and enable certain functionality.</p>
+
+      <h3>Types of Cookies We Use</h3>
+      <ul>
+        <li>
+          <strong>Strictly Necessary Cookies:</strong> Required for the site to function. These include cookies that remember your cookie consent preference (<code>toss_cookie_consent</code>). You cannot opt out of these.
+        </li>
+        <li>
+          <strong>Analytics Cookies:</strong> Used to understand how visitors interact with the site in aggregate. These are anonymised and do not identify individual users.
+        </li>
+        <li>
+          <strong>Advertising Cookies:</strong> Set by Google AdSense to enable personalised advertising. These may track your browsing activity across websites to build a profile and serve relevant ads. See Section 5 for details and opt-out options.
+        </li>
+      </ul>
+
+      <h3>Managing Cookies</h3>
+      <p>You can control and manage cookies through your browser settings. Most browsers allow you to refuse or delete cookies. However, disabling cookies may affect the functionality of this and other websites.</p>
+      <p>Browser-specific instructions:</p>
+      <ul>
+        <li><strong>Google Chrome:</strong> Settings &gt; Privacy and security &gt; Cookies and other site data</li>
+        <li><strong>Mozilla Firefox:</strong> Settings &gt; Privacy &amp; Security &gt; Cookies and Site Data</li>
+        <li><strong>Apple Safari:</strong> Preferences &gt; Privacy &gt; Manage Website Data</li>
+        <li><strong>Microsoft Edge:</strong> Settings &gt; Cookies and site permissions &gt; Manage and delete cookies</li>
+      </ul>
+
+      <h3>Do Not Track</h3>
+      <p>Some browsers offer a &quot;Do Not Track&quot; (DNT) feature. Because there is no universal standard for DNT signals, our website does not currently respond to DNT browser signals. However, you can opt out of personalised advertising through the methods described in Section 5.</p>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="policy-section" id="section-5">
+      <h2>5. Google AdSense and Third-Party Advertising</h2>
+      <p>Toss uses <strong>Google AdSense</strong>, a service provided by Google LLC (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA), to display advertisements on this website. Google AdSense allows us to offer Toss as a free service by generating revenue from relevant, targeted advertising.</p>
+
+      <h3>How Google AdSense Works</h3>
+      <p>When you visit a page with AdSense ads, Google may:</p>
+      <ul>
+        <li>Set the <strong>DoubleClick cookie</strong> (or similar advertising identifiers) on your device.</li>
+        <li>Collect information about your browsing behaviour on this and other websites that use Google services.</li>
+        <li>Use this information to display advertisements tailored to your interests (personalised advertising).</li>
+        <li>Measure the performance and effectiveness of advertisements.</li>
+      </ul>
+
+      <h3>Google's Data Use</h3>
+      <p>Google acts as an independent data controller for the data it collects through AdSense. Google's use of advertising cookies and data is governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google's Advertising Policies</a>. We encourage you to review these policies.</p>
+
+      <h3>Opting Out of Personalised Advertising</h3>
+      <p>You have the right to opt out of personalised advertising at any time using the following methods:</p>
+      <ul>
+        <li><a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> — manage your personalised ad preferences across all Google services.</li>
+        <li><a href="https://www.aboutads.info/" target="_blank" rel="noopener noreferrer">Digital Advertising Alliance (DAA) Opt-Out</a> — opt out from multiple participating companies.</li>
+        <li><a href="https://youronlinechoices.eu/" target="_blank" rel="noopener noreferrer">Your Online Choices (EU)</a> — for users in the European Economic Area.</li>
+        <li>Install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+      </ul>
+      <p>If you opt out, you will still see advertisements, but they will be less relevant to your interests (contextual rather than personalised ads).</p>
+
+      <h3>EU/EEA Consent</h3>
+      <p>For users in the European Economic Area (EEA) and the United Kingdom, Google will display a consent prompt before collecting data for personalised advertising, in compliance with the General Data Protection Regulation (GDPR) and the UK GDPR. We have implemented Google's consent mode to respect your choices.</p>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="policy-section" id="section-6">
+      <h2>6. Data Sharing and Disclosure</h2>
+      <p>We do not sell, rent, or trade your personal information to third parties. We may share information in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Service providers:</strong> We use third-party services (including Google AdSense) that process data on our behalf as described in this Policy. These providers are contractually obligated to handle data securely and only for the purposes we specify.</li>
+        <li><strong>Legal requirements:</strong> We may disclose information if required by law, subpoena, court order, or other legal process, or if we believe in good faith that disclosure is necessary to protect our rights, your safety, or the safety of others.</li>
+        <li><strong>Business transfers:</strong> If Toss is involved in a merger, acquisition, or sale of assets, user information may be transferred as part of that transaction. We will notify users via a prominent notice on this website before personal information is transferred or subject to a different privacy policy.</li>
+        <li><strong>With your consent:</strong> We may share information for any other purpose with your explicit prior consent.</li>
+      </ul>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="policy-section" id="section-7">
+      <h2>7. Data Retention</h2>
+      <p>Because Toss does not collect personal data as part of normal operation, there is no user data stored on our servers to retain or delete. Your coin flip session data (the heads/tails tally and history) exists only in your browser's local memory and is cleared when you close or refresh the page.</p>
+      <p>Cookie consent preferences you set are stored in your browser's local storage under the key <code>toss_cookie_consent</code> and persist until you clear your browser data. You can delete this at any time through your browser settings.</p>
+      <p>If you contact us directly via email or the contact form, we retain your correspondence for up to 12 months after our last communication, after which it is deleted, unless we are required by law to retain it longer.</p>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="policy-section" id="section-8">
+      <h2>8. Your Rights — GDPR (EU/UK Users)</h2>
+      <p>If you are located in the European Economic Area (EEA) or the United Kingdom, you have the following rights under the General Data Protection Regulation (GDPR) and UK GDPR:</p>
+      <ul>
+        <li><strong>Right of access:</strong> You have the right to request a copy of any personal data we hold about you.</li>
+        <li><strong>Right to rectification:</strong> You have the right to request correction of any inaccurate personal data we hold.</li>
+        <li><strong>Right to erasure (&quot;right to be forgotten&quot;):</strong> You have the right to request deletion of your personal data where there is no compelling reason for us to continue processing it.</li>
+        <li><strong>Right to restrict processing:</strong> You have the right to request that we restrict how we process your personal data in certain circumstances.</li>
+        <li><strong>Right to data portability:</strong> You have the right to receive your personal data in a structured, machine-readable format and transfer it to another controller.</li>
+        <li><strong>Right to object:</strong> You have the right to object to our processing of your personal data for direct marketing purposes at any time.</li>
+        <li><strong>Rights related to automated decision-making:</strong> You have the right not to be subject to decisions made solely on the basis of automated processing that significantly affects you.</li>
+        <li><strong>Right to withdraw consent:</strong> Where processing is based on consent, you have the right to withdraw consent at any time.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@toss-website-8nh.caffeine.xyz">privacy@toss-website-8nh.caffeine.xyz</a>. We will respond to your request within 30 days. You also have the right to lodge a complaint with your local data protection authority (e.g. the ICO in the UK, or your national supervisory authority in the EU).</p>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="policy-section" id="section-9">
+      <h2>9. Your Rights — CCPA (California Users)</h2>
+      <p>If you are a resident of California, the California Consumer Privacy Act (CCPA) grants you additional rights regarding your personal information:</p>
+      <ul>
+        <li><strong>Right to know:</strong> You have the right to request disclosure of the categories and specific pieces of personal information we have collected about you in the past 12 months, the sources of that information, our business purpose for collecting it, and the categories of third parties with whom we share it.</li>
+        <li><strong>Right to delete:</strong> You have the right to request deletion of personal information we have collected from you, subject to certain exceptions.</li>
+        <li><strong>Right to opt out of sale:</strong> We do not sell personal information. However, if this ever changes, you would have the right to opt out.</li>
+        <li><strong>Right to non-discrimination:</strong> You have the right to receive equal service and price even if you exercise your CCPA privacy rights.</li>
+        <li><strong>Right to correct:</strong> You have the right to request correction of inaccurate personal information we hold about you.</li>
+      </ul>
+      <p>To exercise your CCPA rights, please contact us at <a href="mailto:privacy@toss-website-8nh.caffeine.xyz">privacy@toss-website-8nh.caffeine.xyz</a> with the subject line &quot;CCPA Privacy Request&quot;. We will respond within 45 days.</p>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="policy-section" id="section-10">
+      <h2>10. Children's Privacy (COPPA)</h2>
+      <p>Toss is intended for general audiences and is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. In compliance with the Children's Online Privacy Protection Act (COPPA), we do not solicit or accept personal information from anyone known to be under 13.</p>
+      <p>Google AdSense on this website is configured to not serve personalised advertisements to users known to be under the age of 13, in compliance with COPPA and Google's family policies.</p>
+      <p>If you are a parent or guardian and believe your child under 13 has provided personal information through our Service, please contact us immediately at <a href="mailto:privacy@toss-website-8nh.caffeine.xyz">privacy@toss-website-8nh.caffeine.xyz</a>. We will promptly investigate and, if confirmed, delete such information from our systems.</p>
+    </section>
+
+    <!-- Section 11 -->
+    <section class="policy-section" id="section-11">
+      <h2>11. Data Security</h2>
+      <p>We take the security of your information seriously. Our website is served exclusively over HTTPS (TLS encryption), which protects data in transit between your browser and our servers. We implement HTTP Strict Transport Security (HSTS) to prevent downgrade attacks and cookie hijacking.</p>
+      <p>Because Toss collects minimal data and does not maintain user accounts or databases of personal information in the ordinary course of operation, the attack surface for data breaches is significantly reduced.</p>
+      <p>However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. While we strive to use commercially acceptable means to protect your information, we cannot guarantee its absolute security. In the event of a data breach that affects your rights and freedoms, we will notify affected individuals and relevant authorities as required by applicable law.</p>
+    </section>
+
+    <!-- Section 12 -->
+    <section class="policy-section" id="section-12">
+      <h2>12. Third-Party Links</h2>
+      <p>Our website may contain links to third-party websites, services, or applications that are not operated by us. These links are provided for your convenience and informational purposes only. We have no control over the content, privacy policies, or practices of any third-party sites.</p>
+      <p>We strongly advise you to review the Privacy Policy of every site you visit. We bear no responsibility or liability for the content, privacy policies, or practices of any third-party sites or services.</p>
+    </section>
+
+    <!-- Section 13 -->
+    <section class="policy-section" id="section-13">
+      <h2>13. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the &quot;Last updated&quot; date at the top of this page.</li>
+        <li>Where required by law, obtain your consent to the changes.</li>
+      </ul>
+      <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information. Your continued use of the Service after any changes to this Privacy Policy constitutes your acceptance of the new terms, to the extent permitted by applicable law.</p>
+    </section>
+
+    <!-- Section 14 -->
+    <section class="policy-section" id="section-14">
+      <h2>14. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+      <div class="highlight-box">
+        <p><strong>Toss Coin Flip</strong><br />
+        Website: <a href="https://toss-website-8nh.caffeine.xyz/">https://toss-website-8nh.caffeine.xyz/</a><br />
+        Email: <a href="mailto:privacy@toss-website-8nh.caffeine.xyz">privacy@toss-website-8nh.caffeine.xyz</a><br />
+        Contact form: <a href="/#contact">Contact Us page</a><br />
+        Response time: We aim to respond to all enquiries within 48 business hours.</p>
+      </div>
+      <p>For GDPR-related enquiries, you may also contact your local data protection supervisory authority. A list of EU supervisory authorities is available at <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank" rel="noopener noreferrer">edpb.europa.eu</a>. UK residents may contact the Information Commissioner's Office (ICO) at <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/#blog">Blog</a>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/#disclaimer">Disclaimer</a>
+      <a href="/#contact">Contact Us</a>
+    </div>
+    <p>&copy; 2026 Toss Coin Flip. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

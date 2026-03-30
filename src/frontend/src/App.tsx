@@ -8,10 +8,13 @@ import {
   Clock,
   Coins,
   Globe,
+  Instagram,
   Loader2,
   LogOut,
   Shield,
   Sparkles,
+  Twitter,
+  Youtube,
   Zap,
 } from "lucide-react";
 import { AnimatePresence, motion, useInView } from "motion/react";
@@ -320,18 +323,13 @@ function Navbar({ currentPage, onNavigate }: NavbarProps) {
           >
             Contact
           </button>
-          <button
-            type="button"
-            onClick={() => onNavigate("privacy")}
-            className={`text-sm font-medium transition-colors ${
-              currentPage === "privacy"
-                ? "text-toss-orange"
-                : "text-toss-text-muted hover:text-foreground"
-            }`}
+          <a
+            href="/privacy.html"
+            className="text-sm font-medium transition-colors text-toss-text-muted hover:text-foreground"
             data-ocid="nav.privacy.link"
           >
             Privacy
-          </button>
+          </a>
         </div>
 
         <div className="flex items-center gap-2">
@@ -1202,14 +1200,13 @@ function Footer({ onNavigate }: FooterProps) {
             >
               Contact Us
             </button>
-            <button
-              type="button"
-              onClick={() => onNavigate("privacy")}
+            <a
+              href="/privacy.html"
               className="hover:text-foreground transition-colors"
               data-ocid="footer.privacy.link"
             >
               Privacy Policy
-            </button>
+            </a>
             <button
               type="button"
               onClick={() => onNavigate("disclaimer")}
@@ -1219,6 +1216,34 @@ function Footer({ onNavigate }: FooterProps) {
               Disclaimer
             </button>
           </div>
+        </div>
+
+        {/* Social links */}
+        <div className="flex items-center justify-center gap-5 mb-6">
+          <button
+            type="button"
+            aria-label="Twitter / X"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            data-ocid="footer.twitter.link"
+          >
+            <Twitter className="w-4 h-4" />
+          </button>
+          <button
+            type="button"
+            aria-label="YouTube"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            data-ocid="footer.youtube.link"
+          >
+            <Youtube className="w-4 h-4" />
+          </button>
+          <button
+            type="button"
+            aria-label="Instagram"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            data-ocid="footer.instagram.link"
+          >
+            <Instagram className="w-4 h-4" />
+          </button>
         </div>
 
         {/* Bottom row */}
@@ -1241,7 +1266,7 @@ function Footer({ onNavigate }: FooterProps) {
 }
 
 // --- Cookie Consent Banner ---
-function CookieConsent({ onNavigate }: { onNavigate: (page: Page) => void }) {
+function CookieConsent() {
   const [visible, setVisible] = useState(() => {
     return localStorage.getItem("toss_cookie_consent") !== "accepted";
   });
@@ -1267,14 +1292,13 @@ function CookieConsent({ onNavigate }: { onNavigate: (page: Page) => void }) {
           of cookies.
         </p>
         <div className="flex items-center gap-3 flex-shrink-0">
-          <button
-            type="button"
-            onClick={() => onNavigate("privacy")}
+          <a
+            href="/privacy.html"
             className="text-xs font-bold uppercase tracking-widest text-toss-orange hover:underline transition-colors"
             data-ocid="cookie.learn_more.button"
           >
             Learn More
-          </button>
+          </a>
           <button
             type="button"
             onClick={accept}
@@ -1361,7 +1385,7 @@ export default function App() {
               transition={{ duration: 0.3 }}
             >
               {/* Hero */}
-              <main className="pt-32 pb-16 px-6 text-center">
+              <main id="main-content" className="pt-32 pb-16 px-6 text-center">
                 <div className="max-w-3xl mx-auto">
                   <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -1397,51 +1421,51 @@ export default function App() {
                     />
                   </motion.div>
                 </div>
-              </main>
 
-              <FeaturesStrip />
-              <HowItWorks />
-              <HowDoesItWorkDetail />
-              <HistorySection history={history} />
-              <CoinTossHistory />
-              {/* About section */}
-              <section id="about" className="py-20 px-6">
-                <div className="max-w-3xl mx-auto text-center">
-                  <p className="text-xs font-bold uppercase tracking-widest text-toss-orange mb-3">
-                    About
-                  </p>
-                  <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground mb-6">
-                    About Toss
-                  </h2>
-                  <div className="glass-card rounded-3xl p-8 text-left space-y-4">
-                    <p className="text-muted-foreground leading-relaxed">
-                      Toss is a free, browser-based coin flip tool designed to
-                      help you make quick decisions fairly and instantly.
-                      Whether you&apos;re settling a friendly debate, deciding
-                      who goes first in a game, or simply need a random choice,
-                      Toss delivers a genuine 50/50 result every time.
+                <FeaturesStrip />
+                <HowItWorks />
+                <HowDoesItWorkDetail />
+                <HistorySection history={history} />
+                <CoinTossHistory />
+                {/* About section */}
+                <section id="about" className="py-20 px-6">
+                  <div className="max-w-3xl mx-auto text-center">
+                    <p className="text-xs font-bold uppercase tracking-widest text-toss-orange mb-3">
+                      About
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Built with modern web technology and hosted on the
-                      Internet Computer blockchain, Toss is fast, secure, and
-                      completely free to use. No downloads, no registration, no
-                      data collection.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Have feedback or questions? We&apos;d love to hear from
-                      you — reach out at{" "}
-                      <a
-                        href="mailto:support@toss.app"
-                        className="text-toss-orange hover:underline"
-                      >
-                        support@toss.app
-                      </a>
-                      .
-                    </p>
+                    <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-foreground mb-6">
+                      About Toss
+                    </h2>
+                    <div className="glass-card rounded-3xl p-8 text-left space-y-4">
+                      <p className="text-muted-foreground leading-relaxed">
+                        Toss is a free, browser-based coin flip tool designed to
+                        help you make quick decisions fairly and instantly.
+                        Whether you&apos;re settling a friendly debate, deciding
+                        who goes first in a game, or simply need a random
+                        choice, Toss delivers a genuine 50/50 result every time.
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Built with modern web technology and hosted on the
+                        Internet Computer blockchain, Toss is fast, secure, and
+                        completely free to use. No downloads, no registration,
+                        no data collection.
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Have feedback or questions? We&apos;d love to hear from
+                        you — reach out at{" "}
+                        <a
+                          href="mailto:support@toss-website-8nh.caffeine.xyz"
+                          className="text-toss-orange hover:underline"
+                        >
+                          support@toss.app
+                        </a>
+                        .
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </section>
-              <FAQSection />
+                </section>
+                <FAQSection />
+              </main>
               <Footer onNavigate={handleNavigate} />
             </motion.div>
           )}
@@ -1518,7 +1542,7 @@ export default function App() {
           )}
         </AnimatePresence>
         <AnimatePresence>
-          <CookieConsent onNavigate={handleNavigate} />
+          <CookieConsent />
         </AnimatePresence>
       </div>
     </div>

@@ -1,4 +1,10 @@
-import { ArrowLeft, BookOpen, Calendar, ChevronRight } from "lucide-react";
+import {
+  ArrowLeft,
+  BookOpen,
+  Calendar,
+  ChevronRight,
+  User,
+} from "lucide-react";
 import { motion } from "motion/react";
 
 interface BlogPageProps {
@@ -9,30 +15,64 @@ interface BlogPageProps {
 const posts = [
   {
     id: 1,
-    title: "The Science Behind a Fair Coin Flip",
+    title: "Why I Trust a Digital Coin Flip More Than a Real One",
     date: "March 20, 2026",
     category: "Science",
     excerpt:
-      "Randomness is harder to achieve than it seems. Explore the mathematics of probability, the nature of pseudo-random number generators, and why a digital coin flip can be just as fair — or fairer — than a physical one.",
-    readTime: "5 min read",
+      "I have a quarter that always seems to land heads. I started tracking it. Then I fell down a physics rabbit hole. Turns out, physical coins are quietly biased — and the fix is a cryptographic function your bank also uses.",
+    readTime: "6 min read",
+    author: "Alex Rivera",
   },
   {
     id: 2,
-    title: "10 Creative Ways to Use a Coin Flip",
+    title: "The Coin Flip That Changed My Lunch Routine (And What I Learned)",
     date: "March 10, 2026",
     category: "Decision Making",
     excerpt:
-      "From choosing a restaurant when you can't agree to resolving who takes out the trash, the humble coin flip is the world's most underrated decision-making tool. Here are ten surprisingly clever ways to put it to work.",
-    readTime: "4 min read",
+      "Every day at noon my team spent 20 minutes deciding where to eat. I thought using a coin flip was lazy. Three months later, I had discovered two new favorite restaurants and a new theory about how we make bad decisions.",
+    readTime: "5 min read",
+    author: "Sam Patel",
   },
   {
     id: 3,
-    title: "The History of Heads or Tails",
+    title: "Heads or Tails Has Been Around Longer Than Most Religions",
     date: "February 28, 2026",
     category: "History",
     excerpt:
-      "Long before smartphones and virtual coins, ancient Romans were flipping denarii to settle disputes. Trace the journey of the coin toss from the Roman Empire to the NFL Super Bowl — and discover why this 2,000-year-old tradition is still going strong.",
+      "Romans were flipping coins before Christianity existed. Medieval England had its own version. The Wright Brothers used a coin toss to decide who flew first. Here's the surprisingly rich 2,000-year story of a ritual we still use today.",
     readTime: "6 min read",
+    author: "Jordan Kim",
+  },
+  {
+    id: 4,
+    title: "I Flipped a Coin Every Morning for 30 Days. Here's What Happened.",
+    date: "February 15, 2026",
+    category: "Experiments",
+    excerpt:
+      "Every morning, one small decision got handed to a coin. I found a coffee shop I now visit three times a week. I read a book I hated and loved. I called an old friend I hadn't spoken to in two years.",
+    readTime: "7 min read",
+    author: "Sam Patel",
+  },
+  {
+    id: 5,
+    title:
+      "The Gambler's Fallacy Is Ruining Your Decision-Making (And You Don't Know It)",
+    date: "January 30, 2026",
+    category: "Psychology",
+    excerpt:
+      'You flip heads five times in a row. You think tails is "due." You are wrong — and this specific error in reasoning has cost gamblers millions and caused investors to panic-sell into losses. Here\'s the actual math.',
+    readTime: "6 min read",
+    author: "Alex Rivera",
+  },
+  {
+    id: 6,
+    title: "How to Use a Coin Flip to Stop Procrastinating",
+    date: "January 15, 2026",
+    category: "Productivity",
+    excerpt:
+      "I put off reorganizing my home office for four months. Not because it was hard — because I kept getting paralyzed by tiny decisions. One afternoon, I tried flipping a coin for each one. I finished in 90 minutes.",
+    readTime: "6 min read",
+    author: "Jordan Kim",
   },
 ];
 
@@ -71,7 +111,8 @@ export default function BlogPage({ onBack, onOpenPost }: BlogPageProps) {
           </div>
         </div>
         <p className="text-muted-foreground text-sm mb-12 ml-16">
-          Thoughts on randomness, decision-making, and the coin toss.
+          Real thoughts on randomness, decision-making, and the surprisingly
+          rich history of the coin toss.
         </p>
 
         {/* Post grid */}
@@ -81,7 +122,7 @@ export default function BlogPage({ onBack, onOpenPost }: BlogPageProps) {
               key={post.id}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.12 }}
+              transition={{ delay: 0.1 + i * 0.08 }}
               className="glass-card rounded-3xl p-7 md:p-8 flex flex-col md:flex-row gap-6 hover:border-[oklch(0.73_0.15_55/0.3)] transition-all duration-200 group"
               data-ocid={`blog.item.${i + 1}`}
             >
@@ -104,6 +145,10 @@ export default function BlogPage({ onBack, onOpenPost }: BlogPageProps) {
                   <span className="text-xs text-muted-foreground">
                     {post.readTime}
                   </span>
+                  <div className="flex items-center gap-1.5 text-muted-foreground text-xs">
+                    <User className="w-3 h-3" />
+                    <span>By {post.author}</span>
+                  </div>
                 </div>
 
                 <h2 className="text-xl font-black uppercase tracking-tight text-foreground mb-3 leading-tight">
